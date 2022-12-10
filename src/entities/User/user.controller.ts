@@ -6,7 +6,7 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Get('getAll')
-  async getAllUser() {
+  async getAllUser(): Promise<{ message: 'Testeeee' }> {
     return this.userService.getAllUser();
   }
 }
